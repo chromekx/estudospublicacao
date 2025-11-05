@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiTech — Linux, Git e Web</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1><i class="fa-solid fa-book-open"></i> WikiTech</h1>
+        <nav>
+            <ul>
+                <li class="item"><a href="#linux"><i class="fa-brands fa-linux"></i> Linux</a></li>
+                <li class="item"><a href="#git"><i class="fa-brands fa-git-alt"></i> Git</a></li>
+                <li class="item"><a href="#hosting"><i class="fa-solid fa-server"></i> Hospedagem</a></li>
+                <li class="item"><a href="#dns"><i class="fa-solid fa-globe"></i> DNS/HTTPS</a></li>
+                <li class="item"><a href="#platforms"><i class="fa-solid fa-code-branch"></i> Plataformas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- LINUX -->
+        <section id="linux" class="section">
+            <h2><i class="fa-brands fa-linux"></i> Comandos Linux</h2>
+            <p>O Linux é um sistema poderoso usado em servidores, redes e desenvolvimento. Seus comandos permitem
+                controle total do sistema operacional, desde manipular arquivos até monitorar processos e usuários.</p>
+            <div class="grid">
+                <div class="card">
+                    <h3><i class="fa-solid fa-folder"></i> Navegação</h3>
+                    <ul>
+                        <li><b>pwd</b> — mostra o diretório atual.</li>
+                        <li><b>ls</b> — lista arquivos e pastas.</li>
+                        <li><b>cd &lt;pasta&gt;</b> — muda de diretório.</li>
+                        <li><b>cd ..</b> — volta um nível.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-file"></i> Manipulação de Arquivos</h3>
+                    <ul>
+                        <li><b>mkdir</b> — cria uma pasta nova.</li>
+                        <li><b>rm -r</b> — remove pasta e conteúdo.</li>
+                        <li><b>touch</b> — cria arquivo vazio.</li>
+                        <li><b>mv</b> — move ou renomeia arquivos.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-user-shield"></i> Permissões</h3>
+                    <ul>
+                        <li><b>chmod</b> — altera permissões.</li>
+                        <li><b>chown</b> — muda o dono do arquivo.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- GIT -->
+        <section id="git" class="section alt">
+            <h2><i class="fa-brands fa-git-alt"></i> Comandos Git</h2>
+            <p>O Git é um sistema de controle de versão usado para gerenciar projetos e colaborar em equipe. Ele
+                registra mudanças no código e permite voltar a versões anteriores ou trabalhar em branches paralelas.
+            </p>
+            <div class="grid">
+                <div class="card">
+                    <h3><i class="fa-solid fa-gears"></i> Configuração</h3>
+                    <ul>
+                        <li><b>git config --global user.name</b> — define seu nome.</li>
+                        <li><b>git config --global user.email</b> — define seu e-mail.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-code"></i> Controle de Versão</h3>
+                    <ul>
+                        <li><b>git init</b> — inicia repositório.</li>
+                        <li><b>git add .</b> — adiciona arquivos.</li>
+                        <li><b>git commit -m "msg"</b> — salva mudanças.</li>
+                        <li><b>git status</b> — mostra o estado atual.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-cloud-arrow-up"></i> Conexão Remota</h3>
+                    <ul>
+                        <li><b>git push origin main</b> — envia commits.</li>
+                        <li><b>git pull origin main</b> — atualiza do remoto.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOSPEDAGEM -->
+        <section id="hosting" class="section">
+            <h2><i class="fa-solid fa-server"></i> Hospedagem Estática</h2>
+            <p>Plataformas de hospedagem estática publicam sites feitos em HTML, CSS e JS diretamente a partir de um
+                repositório Git. São ideais para portfólios, landing pages e projetos front-end.</p>
+            <div class="cards-wide">
+                <div class="wide">
+                    <h3><i class="fa-solid fa-rocket"></i> Vercel</h3>
+                    <p>Especializada em frameworks modernos (Next.js, React). Faz deploy automático a cada push. Alta
+                        performance e CDN global.</p>
+                </div>
+                <div class="wide">
+                    <h3><i class="fa-solid fa-cloud"></i> Netlify</h3>
+                    <p>Simples e poderosa. Oferece SSL gratuito, funções serverless e integração com repositórios Git.
+                        Interface intuitiva.</p>
+                </div>
+                <div class="wide">
+                    <h3><i class="fa-solid fa-database"></i> Render</h3>
+                    <p>Hospeda sites estáticos e também backends. Boa escolha se o projeto crescer e precisar de APIs ou
+                        banco de dados.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DNS / HTTPS -->
+        <section id="dns" class="section alt">
+            <h2><i class="fa-solid fa-globe"></i> DNS e HTTPS</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3><i class="fa-solid fa-network-wired"></i> DNS</h3>
+                    <p>Traduz nomes de domínio (como <b>meusite.com</b>) em endereços IP. Atua como “agenda da
+                        internet”.</p>
+                    <ul>
+                        <li><b>A</b> — aponta para IPv4.</li>
+                        <li><b>AAAA</b> — aponta para IPv6.</li>
+                        <li><b>CNAME</b> — redireciona para outro domínio.</li>
+                        <li><b>NS</b> — define os servidores de nome.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-lock"></i> HTTPS</h3>
+                    <p>Protocolo seguro que criptografa a comunicação entre navegador e servidor. Garante privacidade e
+                        autenticidade.</p>
+                    <ul>
+                        <li>Criptografia de dados.</li>
+                        <li>Certificados SSL/TLS.</li>
+                        <li>Requisito essencial para SEO e segurança.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- PLATAFORMAS GIT -->
+        <section id="platforms" class="section">
+            <h2><i class="fa-solid fa-code-branch"></i> Plataformas Git</h2>
+            <p>Essas plataformas hospedam repositórios Git e oferecem recursos de colaboração e integração contínua.</p>
+            <div class="cards-wide">
+                <div class="wide">
+                    <h3><i class="fa-brands fa-github"></i> GitHub</h3>
+                    <p>Maior comunidade open-source. Interface intuitiva e integração com diversas ferramentas.</p>
+                </div>
+                <div class="wide">
+                    <h3><i class="fa-brands fa-gitlab"></i> GitLab</h3>
+                    <p>Voltado a equipes DevOps. Permite auto-hospedagem e pipelines completos de CI/CD.</p>
+                </div>
+                <div class="wide">
+                    <h3><i class="fa-brands fa-bitbucket"></i> Bitbucket</h3>
+                    <p>Focado em equipes corporativas. Integra-se com Jira e Confluence, da Atlassian.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Victor Henrique Souza — Informática para Internet</p>
+    </footer>
+
+</body>
+
+</html>
