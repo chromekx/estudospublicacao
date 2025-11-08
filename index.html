@@ -25,35 +25,65 @@
     </header>
 
     <main>
+
         <!-- LINUX -->
         <section id="linux" class="section">
             <h2><i class="fa-brands fa-linux"></i> Comandos Linux</h2>
-            <p>O Linux é um sistema poderoso usado em servidores, redes e desenvolvimento. Seus comandos permitem
-                controle total do sistema operacional, desde manipular arquivos até monitorar processos e usuários.</p>
+            <p>
+                O Linux é um sistema operacional de código aberto amplamente utilizado em servidores, data centers e
+                sistemas embarcados.
+                Ele é conhecido por sua estabilidade, segurança e flexibilidade. Diferente do Windows, o Linux é baseado
+                em uma filosofia
+                modular e o controle do sistema é feito principalmente via linha de comando, o que permite automação,
+                manutenção remota
+                e um domínio completo sobre o sistema.
+            </p>
+
             <div class="grid">
                 <div class="card">
-                    <h3><i class="fa-solid fa-folder"></i> Navegação</h3>
+                    <h3><i class="fa-solid fa-folder"></i> Navegação no Sistema</h3>
+                    <p>
+                        O sistema de arquivos no Linux segue uma estrutura hierárquica única, começando em <b>/</b>
+                        (raiz). Entender comandos de
+                        navegação é essencial para localizar e manipular arquivos.
+                    </p>
                     <ul>
                         <li><b>pwd</b> — mostra o diretório atual.</li>
-                        <li><b>ls</b> — lista arquivos e pastas.</li>
-                        <li><b>cd &lt;pasta&gt;</b> — muda de diretório.</li>
-                        <li><b>cd ..</b> — volta um nível.</li>
+                        <li><b>ls -l</b> — lista arquivos com detalhes como permissões, dono e tamanho.</li>
+                        <li><b>cd &lt;pasta&gt;</b> — muda o diretório atual.</li>
+                        <li><b>cd ..</b> — volta um nível na hierarquia.</li>
+                        <li><b>tree</b> — exibe a estrutura de diretórios em forma de árvore.</li>
                     </ul>
                 </div>
+
                 <div class="card">
                     <h3><i class="fa-solid fa-file"></i> Manipulação de Arquivos</h3>
+                    <p>
+                        Criar, mover e remover arquivos faz parte do uso cotidiano. Esses comandos permitem gerenciar
+                        dados com rapidez e precisão.
+                    </p>
                     <ul>
-                        <li><b>mkdir</b> — cria uma pasta nova.</li>
-                        <li><b>rm -r</b> — remove pasta e conteúdo.</li>
-                        <li><b>touch</b> — cria arquivo vazio.</li>
-                        <li><b>mv</b> — move ou renomeia arquivos.</li>
+                        <li><b>touch arquivo.txt</b> — cria um novo arquivo vazio.</li>
+                        <li><b>cp origem destino</b> — copia arquivos ou diretórios.</li>
+                        <li><b>mv arquivo.txt nova_pasta/</b> — move ou renomeia arquivos.</li>
+                        <li><b>rm -r pasta/</b> — remove diretórios recursivamente (com cuidado).</li>
+                        <li><b>cat arquivo.txt</b> — exibe o conteúdo de um arquivo.</li>
                     </ul>
                 </div>
+
                 <div class="card">
-                    <h3><i class="fa-solid fa-user-shield"></i> Permissões</h3>
+                    <h3><i class="fa-solid fa-user-shield"></i> Permissões e Segurança</h3>
+                    <p>
+                        O Linux é multiusuário, e a segurança é gerenciada através de permissões e donos de arquivos.
+                        Três grupos de permissão
+                        controlam o acesso: dono, grupo e outros.
+                    </p>
                     <ul>
-                        <li><b>chmod</b> — altera permissões.</li>
-                        <li><b>chown</b> — muda o dono do arquivo.</li>
+                        <li><b>chmod 755 arquivo</b> — altera as permissões de leitura, escrita e execução.</li>
+                        <li><b>chown usuario:grupo arquivo</b> — muda o dono e o grupo do arquivo.</li>
+                        <li><b>sudo</b> — executa comandos administrativos temporariamente.</li>
+                        <li><b>ps aux</b> — exibe todos os processos em execução.</li>
+                        <li><b>kill PID</b> — finaliza processos travados.</li>
                     </ul>
                 </div>
             </div>
@@ -62,31 +92,56 @@
         <!-- GIT -->
         <section id="git" class="section alt">
             <h2><i class="fa-brands fa-git-alt"></i> Comandos Git</h2>
-            <p>O Git é um sistema de controle de versão usado para gerenciar projetos e colaborar em equipe. Ele
-                registra mudanças no código e permite voltar a versões anteriores ou trabalhar em branches paralelas.
+            <p>
+                O Git é um sistema de controle de versão distribuído, criado por Linus Torvalds, que permite rastrear
+                mudanças em projetos
+                e colaborar com eficiência. Cada desenvolvedor possui uma cópia completa do repositório, garantindo
+                integridade e
+                independência de rede. É a base de plataformas como GitHub, GitLab e Bitbucket.
             </p>
+
             <div class="grid">
                 <div class="card">
-                    <h3><i class="fa-solid fa-gears"></i> Configuração</h3>
+                    <h3><i class="fa-solid fa-gears"></i> Configuração Inicial</h3>
+                    <p>
+                        Antes de começar, o Git precisa conhecer sua identidade para registrar corretamente os autores
+                        dos commits.
+                    </p>
                     <ul>
-                        <li><b>git config --global user.name</b> — define seu nome.</li>
-                        <li><b>git config --global user.email</b> — define seu e-mail.</li>
+                        <li><b>git config --global user.name "Seu Nome"</b></li>
+                        <li><b>git config --global user.email seu@email.com</b></li>
+                        <li><b>git config --list</b> — exibe as configurações atuais.</li>
                     </ul>
                 </div>
+
                 <div class="card">
-                    <h3><i class="fa-solid fa-code"></i> Controle de Versão</h3>
+                    <h3><i class="fa-solid fa-code"></i> Versionamento e Histórico</h3>
+                    <p>
+                        O Git monitora cada alteração feita em arquivos, permitindo criar versões, desfazer erros e
+                        comparar estados do projeto.
+                    </p>
                     <ul>
-                        <li><b>git init</b> — inicia repositório.</li>
-                        <li><b>git add .</b> — adiciona arquivos.</li>
-                        <li><b>git commit -m "msg"</b> — salva mudanças.</li>
-                        <li><b>git status</b> — mostra o estado atual.</li>
+                        <li><b>git init</b> — inicializa um novo repositório Git.</li>
+                        <li><b>git add .</b> — adiciona arquivos à área de preparação (staging area).</li>
+                        <li><b>git commit -m "mensagem"</b> — salva uma nova versão (commit) com descrição.</li>
+                        <li><b>git log</b> — lista o histórico de commits.</li>
+                        <li><b>git diff</b> — mostra diferenças entre versões.</li>
                     </ul>
                 </div>
+
                 <div class="card">
-                    <h3><i class="fa-solid fa-cloud-arrow-up"></i> Conexão Remota</h3>
+                    <h3><i class="fa-solid fa-cloud-arrow-up"></i> Colaboração e Ramificações</h3>
+                    <p>
+                        O Git permite criar branches (ramificações) para desenvolver novas funcionalidades de forma
+                        isolada, sem interferir no
+                        código principal.
+                    </p>
                     <ul>
-                        <li><b>git push origin main</b> — envia commits.</li>
-                        <li><b>git pull origin main</b> — atualiza do remoto.</li>
+                        <li><b>git branch nome</b> — cria uma nova branch.</li>
+                        <li><b>git checkout nome</b> — alterna para uma branch existente.</li>
+                        <li><b>git merge nome</b> — une uma branch com outra.</li>
+                        <li><b>git push origin main</b> — envia alterações ao repositório remoto.</li>
+                        <li><b>git pull origin main</b> — atualiza o repositório local.</li>
                     </ul>
                 </div>
             </div>
@@ -95,23 +150,43 @@
         <!-- HOSPEDAGEM -->
         <section id="hosting" class="section">
             <h2><i class="fa-solid fa-server"></i> Hospedagem Estática</h2>
-            <p>Plataformas de hospedagem estática publicam sites feitos em HTML, CSS e JS diretamente a partir de um
-                repositório Git. São ideais para portfólios, landing pages e projetos front-end.</p>
+            <p>
+                A hospedagem estática é ideal para sites compostos por HTML, CSS e JavaScript puro. Diferente de
+                servidores dinâmicos, onde
+                há processamento em tempo real, as páginas estáticas são rápidas e seguras, entregues diretamente por
+                redes de distribuição
+                de conteúdo (CDNs). Três das plataformas mais conhecidas são:
+            </p>
+
             <div class="cards-wide">
                 <div class="wide">
                     <h3><i class="fa-solid fa-rocket"></i> Vercel</h3>
-                    <p>Especializada em frameworks modernos (Next.js, React). Faz deploy automático a cada push. Alta
-                        performance e CDN global.</p>
+                    <p>
+                        Focada em frameworks modernos como Next.js, React e Svelte. A Vercel oferece deploy automático a
+                        cada commit no GitHub,
+                        integração com APIs, funções serverless e cache inteligente via Edge Network. É excelente para
+                        projetos com foco em
+                        performance e escalabilidade.
+                    </p>
                 </div>
                 <div class="wide">
                     <h3><i class="fa-solid fa-cloud"></i> Netlify</h3>
-                    <p>Simples e poderosa. Oferece SSL gratuito, funções serverless e integração com repositórios Git.
-                        Interface intuitiva.</p>
+                    <p>
+                        Conhecida pela simplicidade, a Netlify automatiza deploys, configura HTTPS gratuitamente via
+                        Let's Encrypt e oferece
+                        funções serverless, redirecionamentos e variáveis de ambiente. Ideal para estudantes e
+                        desenvolvedores iniciantes.
+                    </p>
                 </div>
                 <div class="wide">
                     <h3><i class="fa-solid fa-database"></i> Render</h3>
-                    <p>Hospeda sites estáticos e também backends. Boa escolha se o projeto crescer e precisar de APIs ou
-                        banco de dados.</p>
+                    <p>
+                        O Render combina hospedagem estática com suporte a backends em Node, Python e Go. Permite
+                        escalonamento automático,
+                        integrações Git e domínio personalizado, sendo ótimo para quem planeja expandir um site estático
+                        para um aplicativo
+                        completo.
+                    </p>
                 </div>
             </div>
         </section>
@@ -120,26 +195,73 @@
         <section id="dns" class="section alt">
             <h2><i class="fa-solid fa-globe"></i> DNS e HTTPS</h2>
             <div class="grid">
+
                 <div class="card">
-                    <h3><i class="fa-solid fa-network-wired"></i> DNS</h3>
-                    <p>Traduz nomes de domínio (como <b>meusite.com</b>) em endereços IP. Atua como “agenda da
-                        internet”.</p>
+                    <h3><i class="fa-solid fa-network-wired"></i> DNS — Sistema de Nomes de Domínio</h3>
+                    <p>
+                        O DNS (Domain Name System) é o serviço responsável por traduzir nomes de domínio legíveis por
+                        humanos, como
+                        <b>www.exemplo.com</b>, em endereços IP, como <b>192.168.0.1</b>. Ele funciona como uma “agenda
+                        telefônica” da Internet.
+                        Quando você acessa um site, seu computador pergunta a um servidor DNS qual IP corresponde ao
+                        domínio, e então estabelece
+                        a conexão com o servidor certo.
+                    </p>
+                    <p>
+                        O sistema DNS é hierárquico e distribuído, composto por servidores raiz, TLD (Top-Level Domain)
+                        e autoritativos.
+                        Cada um deles tem funções específicas e armazena informações em registros chamados <b>Resource
+                            Records</b>:
+                    </p>
                     <ul>
-                        <li><b>A</b> — aponta para IPv4.</li>
-                        <li><b>AAAA</b> — aponta para IPv6.</li>
-                        <li><b>CNAME</b> — redireciona para outro domínio.</li>
-                        <li><b>NS</b> — define os servidores de nome.</li>
+                        <li><b>A</b> — associa um domínio a um endereço IPv4.</li>
+                        <li><b>AAAA</b> — associa um domínio a um endereço IPv6.</li>
+                        <li><b>CNAME</b> — cria um apelido que aponta para outro domínio.</li>
+                        <li><b>MX</b> — indica os servidores responsáveis por e-mails do domínio.</li>
+                        <li><b>NS</b> — define os servidores autoritativos da zona.</li>
+                        <li><b>TXT</b> — armazena textos, usados em SPF e verificações de domínio.</li>
+                        <li><b>CAA</b> — especifica quais autoridades certificadoras podem emitir certificados SSL/TLS.
+                        </li>
                     </ul>
+                    <p>
+                        Consultas DNS podem ser recursivas (onde um servidor busca a resposta completa) ou iterativas
+                        (onde ele apenas indica o
+                        próximo servidor a consultar). O parâmetro <b>TTL (Time To Live)</b> define por quanto tempo uma
+                        resposta pode ser
+                        armazenada em cache, afetando diretamente a velocidade de propagação de mudanças.
+                    </p>
                 </div>
+
                 <div class="card">
-                    <h3><i class="fa-solid fa-lock"></i> HTTPS</h3>
-                    <p>Protocolo seguro que criptografa a comunicação entre navegador e servidor. Garante privacidade e
-                        autenticidade.</p>
+                    <h3><i class="fa-solid fa-lock"></i> HTTPS — Segurança e Criptografia</h3>
+                    <p>
+                        HTTPS (HyperText Transfer Protocol Secure) é a versão segura do HTTP. Ele protege a comunicação
+                        entre o navegador e o
+                        servidor usando o protocolo TLS (Transport Layer Security). O TLS garante três princípios
+                        fundamentais:
+                    </p>
                     <ul>
-                        <li>Criptografia de dados.</li>
-                        <li>Certificados SSL/TLS.</li>
-                        <li>Requisito essencial para SEO e segurança.</li>
+                        <li><b>Confidencialidade</b> — os dados são criptografados e não podem ser lidos por terceiros.
+                        </li>
+                        <li><b>Integridade</b> — impede que o conteúdo seja alterado durante o tráfego.</li>
+                        <li><b>Autenticação</b> — o servidor prova sua identidade através de certificados digitais
+                            emitidos por Autoridades
+                            Certificadoras (CAs).</li>
                     </ul>
+                    <p>
+                        Durante o <b>Handshake TLS</b>, cliente e servidor trocam informações para negociar a cifra e
+                        gerar chaves de sessão.
+                        O navegador valida o certificado, verifica sua assinatura e confirma se o domínio é confiável.
+                        Uma vez estabelecida a
+                        conexão, os dados são transmitidos de forma criptografada.
+                    </p>
+                    <p>
+                        Hoje, o HTTPS é essencial: protege credenciais, impede ataques Man-in-the-Middle e é exigido por
+                        navegadores modernos e
+                        mecanismos de busca. Cabeçalhos como <b>HSTS</b> (Strict Transport Security) reforçam a
+                        segurança ao obrigar o uso de
+                        HTTPS nas próximas conexões.
+                    </p>
                 </div>
             </div>
         </section>
@@ -147,22 +269,46 @@
         <!-- PLATAFORMAS GIT -->
         <section id="platforms" class="section">
             <h2><i class="fa-solid fa-code-branch"></i> Plataformas Git</h2>
-            <p>Essas plataformas hospedam repositórios Git e oferecem recursos de colaboração e integração contínua.</p>
+            <p>
+                Plataformas baseadas em Git fornecem não apenas hospedagem de repositórios, mas também ferramentas de
+                colaboração, controle
+                de acesso, pipelines CI/CD e integração com sistemas externos. Três das mais conhecidas são:
+            </p>
+
             <div class="cards-wide">
                 <div class="wide">
                     <h3><i class="fa-brands fa-github"></i> GitHub</h3>
-                    <p>Maior comunidade open-source. Interface intuitiva e integração com diversas ferramentas.</p>
+                    <p>
+                        Focado na comunidade open source, o GitHub é o maior ecossistema de desenvolvedores do mundo.
+                        Oferece issues, pull
+                        requests, GitHub Actions (para automação) e GitHub Pages (para hospedagem gratuita de sites
+                        estáticos). É ideal tanto
+                        para projetos pessoais quanto corporativos.
+                    </p>
                 </div>
                 <div class="wide">
                     <h3><i class="fa-brands fa-gitlab"></i> GitLab</h3>
-                    <p>Voltado a equipes DevOps. Permite auto-hospedagem e pipelines completos de CI/CD.</p>
+                    <p>
+                        O GitLab combina versionamento com um conjunto completo de DevOps: CI/CD, pipelines, controle de
+                        qualidade e
+                        monitoramento. Pode ser usado na nuvem ou instalado em servidores próprios (self-hosted),
+                        oferecendo mais privacidade e
+                        controle.
+                    </p>
                 </div>
                 <div class="wide">
                     <h3><i class="fa-brands fa-bitbucket"></i> Bitbucket</h3>
-                    <p>Focado em equipes corporativas. Integra-se com Jira e Confluence, da Atlassian.</p>
+                    <p>
+                        Voltado a equipes empresariais, o Bitbucket pertence à Atlassian e integra-se ao Jira e
+                        Confluence. Suporta repositórios
+                        privados ilimitados e é amplamente usado em empresas que buscam controle de acesso detalhado e
+                        integração com
+                        ferramentas corporativas.
+                    </p>
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer>
